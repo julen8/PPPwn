@@ -1,10 +1,11 @@
-#include <iostream>
-#include <fstream>
-#include <unordered_map>
-#include <vector>
-#include <string>
 #include <PcapLiveDeviceList.h>
 #include <clipp.h>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <vector>
+#include <csignal>
 
 #if defined(__APPLE__)
 
@@ -114,7 +115,7 @@ static void signal_handler(int sig_num) {
 
 int main(int argc, char *argv[]) {
     using namespace clipp;
-    std::cout << "[+] PPPwn++ - PlayStation 4 PPPoE RCE by theflow" << std::endl;
+    std::cout << "[+] PPPwn V1.1" << std::endl;
     std::string interface, stage1 = "stage1/stage1.bin", stage2 = "stage2/stage2.bin";
     std::string web_url = "0.0.0.0:7796";
     int fw = 1100;
